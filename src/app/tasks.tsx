@@ -1,7 +1,13 @@
 'use client'; 
-import { useState, useEffect } from 'react'; 
+import { useState } from 'react'; 
 import { Input, HStack, VStack, Button } from '@chakra-ui/react'; 
 import { Checkbox, CheckboxGroup } from '@chakra-ui/react'
+
+export type Task = { 
+    name : string, 
+    id: string, 
+    timeCompleted : number
+}; 
 
 export default function Tasks() { 
     const [tasks, setTasks] = useState<string[]>([]); 
@@ -12,7 +18,6 @@ export default function Tasks() {
 
     function onCheck(event : React.ChangeEvent<HTMLInputElement>) { 
         console.log(event.currentTarget)
-        console.log("hi")
     }
 
     function submit(event : React.KeyboardEvent<HTMLInputElement> ) { 
@@ -45,8 +50,6 @@ export function Task({ name, id } : { name : string, id : Number }) {
     
     const [isChecked, setIsChecked] = useState(false); 
 
-    // should be { name, timeCompleted }[]
-    // const completedItems : string[] = []; 
 
 
     function toggleStrike(event : React.ChangeEvent<HTMLInputElement>) { 
@@ -55,7 +58,7 @@ export function Task({ name, id } : { name : string, id : Number }) {
         // if not checked, push item to completedItems 
 
         const currentTasksString= localStorage.getItem("completedTasks") ? localStorage.getItem("completedTasks") : "[]"; 
-        let currentTasks = JSON.parse(currentTasksString)
+        let currentTasks : CompletedTasks = JSON.parse(currentTasksString ? currentTasksString : ""); 
 
         if (!isChecked) { 
             
@@ -77,11 +80,6 @@ export function Task({ name, id } : { name : string, id : Number }) {
         setIsChecked(!isChecked)
     }
 
-
-    // stores completedTasks in localStorage after each render 
-    // useEffect(() => { 
-    //     window.localStorage.setItem("completedTasks", JSON.stringify(completedItems)); 
-    // }); 
 
     return ( 
         <Checkbox colorScheme="gray" name={name} id={String(id)} onChange={toggleStrike} textDecoration={isChecked ? "line-through" : "none"}> {name} </Checkbox> 

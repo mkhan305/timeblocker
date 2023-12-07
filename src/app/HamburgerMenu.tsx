@@ -7,8 +7,8 @@ export default function HamburgerMenu() {
         <Menu> 
             <MenuButton><HamburgerIcon boxSize={6}/></MenuButton>
             <MenuList> 
-                <MenuItem>About</MenuItem>
-                <MenuItem>How To</MenuItem>
+                <MenuItem as='a' target="_blank" href='/about'>About</MenuItem>
+                <MenuItem as='a' target="_blank" href='/howto'>How To</MenuItem>
             </MenuList> 
         </Menu> 
     ) 
