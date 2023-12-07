@@ -25,12 +25,12 @@ const timer = () => {
     // https://developer.mozilla.org/en-US/docs/Web/API/setInterval. Reccomended to use this function:
     // this is the same function as explained in stopwatch.tsx. 
     const interval = setInterval(() => {
-      set_total((prev) => {
-        if (prev <= 1) {
+      set_total((timer) => {
+        if (timer <= 1) {
           clearInterval(interval);
           start_time(false);
         }
-        return prev - 1;
+        return timer - 1;
       });
     }, 1000);
     set_interval(interval as unknown as number);

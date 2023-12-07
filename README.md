@@ -1,13 +1,28 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## Link to youtube video: https://youtu.be/6fWAl8NO_tU?feature=shared
 
+## Installation Details: 
+Dependencies: 
+    1. Node.js
+    2. Npm Install
+
+Installing:
+    1. Download the code that we have supplied
+    2. Visit the Node.js website and download the installer for your operating system.
+    3. Follow the installation instructions provided on the website.
+    4. After installing Node.js, verify that the runtime was installed correctly using the terminal prompt: "node -v"
+    5. After checking to make sure that Node.js is intalled correctly, run the prompt "npm install" in your terminal. This will download the package and its dependencies.
+    6. Check that npm installed corectly by running "npm -v" in your terminal.
+
+
+## Getting Started:
 First, run the development server:
 
 ```bash
 npm run dev
 # or
-yarn dev
+yarn dev 
 # or
 pnpm dev
 # or
@@ -16,45 +31,11 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-Above is the auto-generated text on how you run the app.
-
-Now here's how you use the app.
-
+## How to use the app
 Description:
     TimeBlocker
     A productivity application for those who use google calendar to coordinate their daily schedule and need a productivity app to track and encourage studying.
-Getting Started:
-    Dependencies:
-        Node.js
-        Npm Install 
-    Installing:
-        Download the code that we have supplied.
-        Visit the Node.js website and download the installer for your operating system.
-        Follow the installation instructions provided on the website
-        After installing Node.js, verify that is is installed correctly by running the command prompt in your terminal: “node -v”
-        After checking to make sure that Node.js is installed correctly, run the prompt “npm install” in your terminal. This will download and install the package and its dependencies.
-        Check that Npm installed correctly by running “npm -v” in your terminal 
-    Executing Program:
-        To start the program, run “npm run dev” and click on the local host link provided. You now should have the application open and can use it.
+
 Usage:
     How To
     First, click the login button. Login with your Google account. The main page consists of three main components: Tasks, Timers, and the Menu Bar.
@@ -81,6 +62,8 @@ Usage:
             Enter Tasks here. Each Task is sent to the Task List upon entering.
         Task List
             A current list of checkboxes for your current tasks. Clicking each task will cross it out. This will not affect its uploading to the Google Calendar. You may remove a task from the task list by clicking the “x” button beside it. These are saved to the Google Calendar by clicking the Sync button in the Menu Bar.
+    After Syncing, in your Google Calendar, you should see an auto generated even pop up with the tasks completed in both the title and body of the event. And our signature sign-off, Made With <3 by Timeblocker.
+
 About:
 
 Authors:
@@ -93,3 +76,14 @@ Copyright (c) 2023 Ethan Dhadly, Mohammad Kahn, Andrew Yu
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/)

@@ -10,16 +10,25 @@ async function handler( req : NextRequest, res : NextResponse ) {
   // gets the users session and post data with all info needed to export an event 
   const session : SessionData = await getServerSession(authOptions)
   const body = await req.json();
-  // console.log(body);  
+  
   const startTime = new Date(parseInt(body.startTime)); 
   const endTime = Date.now(); 
   const completedTasks = JSON.parse(body.completedTasks); 
-  console.log("COMPLETEDTASKS", completedTasks)
+  
 
 
   // define event parameters 
-  const today = `${startTime.getMonth() + 1}/${startTime.getDate()}/${startTime.getFullYear()}`; 
   const numTasks = completedTasks ? completedTasks.length : 0; 
+  
+  let title 
+  if (numTasks) { 
+    title = completedTasks.map(e => e.name).join(", "); 
+  }
+  else { 
+    title = `${startTime.getMonth() + 1}/${startTime.getDate()}/${startTime.getFullYear()} Work Session`; 
+  }
+  
+  
 
    // generates the task description 
   let desc  = ""
@@ -71,7 +80,7 @@ async function handler( req : NextRequest, res : NextResponse ) {
 
   // puts together the event 
   const event = {
-    summary: today + " Work Session",
+    summary: title, 
     description: desc, 
     colorId: '8', 
     start: { dateTime: (new Date(startTime)).toISOString() }, // Use your desired start date and time

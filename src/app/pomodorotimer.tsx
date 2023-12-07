@@ -41,7 +41,7 @@ const pomodoro = () => {
     // if there is no active interval, start a new one
     const new_interval_name = setInterval(() => {
       // decrement timer by 1 second 
-      set_timer((prev) => Math.max(prev - 1, 0));
+      set_timer((timer) => Math.max(timer - 1, 0));
     }, 1000);
 
     set_interval(new_interval_name);

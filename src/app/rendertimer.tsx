@@ -11,7 +11,8 @@ const Rendertimer = () => {
     const [active_timer, set_active_timer] = useState('pomodoro');
 
     // get the name of the timer to display. 
-    // You could combine this functino with the next function and we tried doing this. However, it would mess up the styling since it would make the container box larger. Thus, there is not point combining these two functions together. 
+    // You could combine this function with the next function and we tried doing this. However, it would mess up the styling since it would make the container box larger. Thus, there is not point combining these two functions together. 
+    
     const get_timer = () => {
       switch (active_timer) {
         case 'stopwatch':

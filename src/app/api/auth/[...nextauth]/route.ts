@@ -38,7 +38,7 @@ export const authOptions : NextAuthOptions = {
     }, 
 
     // session callback - stores the tokens, completed tasks, and their times 
-    async session({ session, token, user } : { session: Session, token : any, user :User }) : Promise<GenericObject> { 
+    async session({ session, token, user } : { session: SessionData, token : any, user :User }) : Promise<GenericObject> { 
 
       if (!session.access_token || !session.refresh_token) { 
         session.access_token = token.access_token; 
